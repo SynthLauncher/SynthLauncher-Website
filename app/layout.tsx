@@ -25,35 +25,35 @@ export default function RootLayout({
         className={`${openSans.variable} antialiased`}
       >
         {/* Navbar */}
-        <div className="flex justify-between items-center text-white py-1 pr-3">
-            <Image 
-              src="/r_logo_label.svg"
-              width={250}
-              height={250}
-              alt="logo and label"
-            />
+          <div className="flex justify-between items-center py-1 pr-3 absolute z-10 w-full">
+              <Image 
+                src="/r_logo_label.svg"
+                width={250}
+                height={250}
+                alt="logo and label"
+              />
 
-          <div className="sm:flex gap-3 hidden">
-            <Image 
-                src="/github.svg"
+            <div className="sm:flex gap-3 hidden">
+              <Image 
+                  src="/github.svg"
+                  width={35}
+                  height={35}
+                  alt="Github icon"
+                />
+              <Image 
+                src="/discord.svg"
                 width={35}
                 height={35}
-                alt="Github icon"
+                alt="Discord icon"
               />
-            <Image 
-              src="/discord.svg"
-              width={35}
-              height={35}
-              alt="Discord icon"
-            />
-            <Image 
-              src="/insta.svg"
-              width={35}
-              height={35}
-              alt="Insta icon"
-            />
-          </div> 
-        </div>
+              <Image 
+                src="/insta.svg"
+                width={35}
+                height={35}
+                alt="Insta icon"
+              />
+            </div> 
+          </div>
 
         {children}
       </body>
