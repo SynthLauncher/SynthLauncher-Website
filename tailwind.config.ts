@@ -10,7 +10,6 @@ export default {
   theme: {
   	extend: {
   		colors: {
-			'nav-dark': '#232323',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -58,8 +57,13 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		backgroundImage: {
-			'hero-bg': "url('/hero_bg.png')"	
+			'hero-bg': "url('/hero_bg.png')",
+			'cosmo-gradient': 'linear-gradient(45deg, rgba(84,94,255,1) 0%, rgba(77,87,255,1) 25%, rgba(126,62,255,1) 50%, rgba(159,37,212,1) 72%, rgba(121,47,171,1) 100%)',
 		},
+		fontFamily: {
+			"nunito": "--font-nunito",
+			"open-sans": "--font-open-sans"
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
