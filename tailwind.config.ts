@@ -1,45 +1,53 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 export default {
-    darkMode: ["class"],
+    darkMode: ['class'],
     content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
+
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
+
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
+
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
+
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
   			},
+
   			accent: {
   				DEFAULT: 'hsl(var(--accent))',
   				foreground: 'hsl(var(--accent-foreground))'
   			},
+
   			destructive: {
   				DEFAULT: 'hsl(var(--destructive))',
   				foreground: 'hsl(var(--destructive-foreground))'
   			},
+
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
@@ -51,20 +59,43 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
+
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-		backgroundImage: {
-			'hero-bg': "url('/hero_bg.png')",
-			'cosmo-gradient': 'linear-gradient(45deg, rgba(84,94,255,1) 0%, rgba(77,87,255,1) 25%, rgba(126,62,255,1) 50%, rgba(159,37,212,1) 72%, rgba(121,47,171,1) 100%)',
-		},
+
 		fontFamily: {
-			"nunito": "--font-nunito",
-			"open-sans": "--font-open-sans"
-		}
+			nunito: 'var(--font-nunito)',
+			lato: 'var(--font-lato)',
+
+			'open-sans': 'var(--font-open-sans)',
+		},
+
+		fontWeight: {
+			'lato-100': '100',
+			'lato-300': '300',
+			'lato-400': '400',
+			'lato-700': '700',
+			'lato-900': '900',
+
+			'nunito-200': '200',
+			'nunito-300': '300',
+			'nunito-400': '400',
+			'nunito-500': '500',
+			'nunito-600': '600',
+			'nunito-700': '700',
+			'nunito-800': '800',
+			'nunito-900': '900',
+			'nunito-1000': '1000',
+
+			'open-sans-300': '300',
+			'open-sans-400': '400'
+		},
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	require('tailwindcss-animate'),
+  ],
 } satisfies Config;
