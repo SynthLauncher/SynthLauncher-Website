@@ -6,15 +6,15 @@ export const assets = {
             },
 
             Footer: {
-                copyright_notice: "© 2025 SynthLauncher ORG. | All Rights Reserved"
-            }
-        }
+                copyright_notice: "© 2025 SynthLauncher ORG. | All Rights Reserved",
+            },
+        },
     },
 
     images: {
         en: {
 
-        }
+        },
     },
 
     icons: {
@@ -22,5 +22,8 @@ export const assets = {
         facebook: "/facebook.svg",
         github: "/github.svg",
         instagram: "/instagram.svg",
-    }
+        navlogo: "/navlogo.svg",
+        herologo: "/herologo.svg",
+        hero: "/hero.png",
+    },
 }

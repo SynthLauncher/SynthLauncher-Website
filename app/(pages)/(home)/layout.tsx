@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "../../ui/globals.css";
 
 import { lato, nunito, openSans } from "../../ui/fonts";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "SynthLauncher",
@@ -18,7 +20,13 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${lato.variable} ${nunito.variable}  antialiased`}
       >
+        {/* Navbar */}
+        <Navbar />
+
         {children}
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );
