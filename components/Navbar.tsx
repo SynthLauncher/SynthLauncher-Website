@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className='flex items-center justify-between'>
             {/* Logo */}
             <Image 
-                src={assets.icons.navlogo}
+                src='/navlogo.svg'
                 width={270}
                 height={270}
                 alt='Logo'
@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className='items-center gap-4 mr-4 pb-1 hidden sm:flex'>
                 {/* Discord Icon */}
                 <Image 
-                    src={assets.icons.discord}
+                    src='/discord.svg'
                     width={38}
                     height={38}
                     alt='Discord Icon'
@@ -27,7 +27,7 @@ const Navbar = () => {
 
                 {/* Github Icon */}
                 <Image 
-                    src={assets.icons.github}
+                    src='/github.svg'
                     width={34}
                     height={34}
                     alt='GitHub Icon'
