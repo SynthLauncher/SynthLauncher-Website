@@ -4,9 +4,9 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='h-[327px] bg-footer-dark'>
+    <footer className='h-[350px] bg-footer-dark flex flex-col gap-12'>
       {/* Top Part */}
-      <div className='flex items-center gap-[35px]'>
+      <div className='flex items-center gap-[35px] mx-[100px]'>
         {/* Logo Container */}
         <div>
             <Image
@@ -41,9 +41,12 @@ const Footer = () => {
         </div>
         
         {/* Social Icons Container */}
-        <div className='flex flex-col'>
-          
-          <div className='flex flex-row gap-2'>
+        <div className='flex flex-col gap-2'>
+          <h3 className='font-lato font-lato-700 text-2xl text-white'>
+            Socials
+          </h3>
+
+          <div className='flex flex-row gap-[8px]'>
             {assets.icons.footer.map((icon, index) => {
               const item = assets.icons.footer_icons[index as keyof typeof assets.icons.footer_icons];
 
@@ -61,9 +64,12 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Part */}
-      <div>
 
+      {/* Bottom Part */}
+      <div className='mx-auto'>
+            <h1 className='text-gray-400 font-lato font-lato-400'>
+              {assets.texts.en.Footer.copyright_notice}
+            </h1>
       </div>
     </footer>
   )
