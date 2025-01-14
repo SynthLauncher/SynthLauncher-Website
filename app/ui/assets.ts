@@ -8,6 +8,8 @@ export const assets = {
             Footer: {
                 copyright_notice: "© 2025 SynthLauncher ORG. | All Rights Reserved",
                 footer_navs: {
+                    navs: ["Launcher", "Links", "Info"],
+                    
                     Launcher: [
                         "Download",
                         "Support",
@@ -38,6 +40,19 @@ export const assets = {
     },
 
     icons: {
+        footer_icons: ["discord", "github", "facebook", "instagram"],
+        
+        nav: [
+            "/discord.svg",
+            "/github.svg"
+        ],
+
+        footer: [
+            "/discord.svg",
+            "/github.svg",
+            "/facebook.svg",
+            "/instagram.svg",
+        ],
         discord: "/discord.svg",
         facebook: "/facebook.svg",
         github: "/github.svg",

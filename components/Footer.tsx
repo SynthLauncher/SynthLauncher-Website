@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className='h-[327px] bg-footer-dark'>
       {/* Top Part */}
-      <div className='flex'>
+      <div className='flex items-center gap-[35px]'>
         {/* Logo Container */}
         <div>
             <Image
@@ -18,17 +18,46 @@ const Footer = () => {
         </div>
 
         {/* Footer Navs Container */}
-        <div>
-            <div className='flex flex-col'>
-                <h3 className='font-lato font-lato-700  text-white'>
-                    Launcher
+        <div className='flex flex-row gap-[45px]'>
+          {assets.texts.en.Footer.footer_navs.navs.map((nav, index) => {
+            const items = assets.texts.en.Footer.footer_navs[nav as keyof typeof assets.texts.en.Footer.footer_navs];
+
+            return (
+              <div className='flex flex-col' key={index}>
+                <h3 className='font-lato font-lato-700  text-white text-2xl'>
+                    {nav}
                 </h3>
-            </div>
+
+                <div className='flex flex-col gap-1 mt-4'>
+                  {items.map((text, itemIndex) => (
+                    <h6 className='font-lato text-md text-gray-400' key={itemIndex}>
+                      {text}
+                    </h6>
+                  ))}
+                </div>                
+              </div>
+            );
+          })}
         </div>
         
         {/* Social Icons Container */}
-        <div>
+        <div className='flex flex-col'>
+          
+          <div className='flex flex-row gap-2'>
+            {assets.icons.footer.map((icon, index) => {
+              const item = assets.icons.footer_icons[index as keyof typeof assets.icons.footer_icons];
 
+              return (
+                  <Image
+                    alt={item as string} 
+                    src={icon}
+                    width={35}
+                    height={35}
+                    key={index}
+                  />
+              )
+            })}
+          </div>
         </div>
       </div>
 

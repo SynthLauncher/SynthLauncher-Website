@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "../../ui/globals.css";
+import "./ui/globals.css";
 
-import { lato, nunito, openSans } from "../../ui/fonts";
+import { lato, nunito, openSans } from "./ui/fonts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
