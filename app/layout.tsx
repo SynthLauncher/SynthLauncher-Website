@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.variable} ${lato.variable} ${nunito.variable}  antialiased`}
+        className={`${openSans.variable} ${lato.variable} ${nunito.variable} antialiased`}
       >
         {/* Navbar */}
         <Navbar />

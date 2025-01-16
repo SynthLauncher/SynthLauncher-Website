@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import { assets } from '@/app/ui/assets';
 
 const Navbar = () => {
   return (
-    <nav className='bg-black h-[71px]'>
+    <nav className='absolute z-1 h-[71px] w-full'>
         <div className='flex items-center justify-between'>
             {/* Logo */}
             <Image 

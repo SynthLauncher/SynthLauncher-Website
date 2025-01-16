@@ -10,7 +10,7 @@ const Footer = () => {
       {/* Top Part */}
       <div className="flex flex-wrap items-start gap-[20px] sm:gap-[50px] md:gap-[175px] mt-20 mx-auto">
         {/* Logo Container */}
-        <div className="flex justify-center">
+        <div className="flex justify-center p-4">
           <Image
             src='/footerlogo.svg'
             width={200}
@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Navs Container */}
-        <div className="flex flex-row gap-[75px] mt-[45px] flex-wrap">
+        <div className="flex flex-row gap-[75px] mt-[45px] flex-wrap p-4">
           {footerNavs.labels.map((nav, index) => {
             const items = footerNavs[
                 nav as keyof typeof footerNavs
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
 
         {/* Social Icons Container */}
-        <div className="flex flex-col mt-[45px]">
+        <div className="flex flex-col mt-[45px] p-4">
           <h3 className="font-lato font-lato-700 text-2xl text-white">Socials</h3>
 
           {/* Social Icons */}
@@ -94,7 +94,7 @@ const Footer = () => {
 
       {/* Bottom Part */}
       <div className="mx-auto">
-        <h1 className="text-gray-400 font-lato font-lato-400">
+        <h1 className="text-gray-400 font-lato font-lato-400 whitespace-nowrap overflow-hidden">
           {assets.texts.en.Footer.copyright_notice}
         </h1>
       </div>

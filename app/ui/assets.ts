@@ -14,10 +14,15 @@ export const assets = {
                     Launcher: [
                         "Download",
                         "Support",
+                        "Coming Soon",
+                        "Coming Soon",
+                        "Coming Soon",
                     ],
 
                     Links: [
                         "FAQ",
+                        "Coming Soon",
+                        "Coming Soon",
                     ],
 
                     Info: [

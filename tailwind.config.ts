@@ -95,6 +95,10 @@ export default {
 			'open-sans-300': '300',
 			'open-sans-400': '400'
 		},
+
+		backgroundImage: {
+			hero: "url('/hero.png')",
+		}
   	}
   },
   plugins: [
