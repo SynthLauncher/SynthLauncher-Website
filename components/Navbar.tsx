@@ -22,6 +22,7 @@ const Navbar = () => {
                     height={38}
                     alt='Discord Icon'
                     className='pt-[2px]' 
+                    quality={100}
                 />
 
                 {/* Github Icon */}
@@ -30,6 +31,7 @@ const Navbar = () => {
                     width={34}
                     height={34}
                     alt='GitHub Icon'
+                    quality={100}
                 />
             </div>
         </div>
