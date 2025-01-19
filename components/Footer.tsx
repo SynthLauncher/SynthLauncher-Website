@@ -34,7 +34,7 @@ const Footer = () => {
                 </h3>
 
                 {/* Navs */}
-                <div className="flex flex-col gap-1 mt-4">
+                <div className="flex flex-col gap-2 mt-4">
                   {items.map((text, itemIndex) => (
                     <div key={itemIndex} className='flex'>
                       <h6 className="font-lato text-md whitespace-nowrap text-ellipsis overflow-hidden text-gray-400">

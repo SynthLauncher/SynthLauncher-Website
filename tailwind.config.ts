@@ -105,6 +105,10 @@ export default {
 			"steel-gradient": "linear-gradient(135deg, rgba(86,86,86,1) 0%, rgba(77,77,77,1) 25%, rgba(51,51,51,1) 50%, rgba(60,60,60,1) 75%, rgba(52,52,52,1) 100%)",
 		
 			"orange-purple-gradient": "linear-gradient(155deg, rgba(255,115,0,1) 0%, rgba(184,86,255,1) 100%);",
+		},
+
+		zIndex: {
+			"1": "1"
 		}
   	}
   },

@@ -26,7 +26,7 @@ export default function HomePage() {
             */}
           {/* Button */}
           <Button variant="download" size="nm">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               {/* Download Icon */}
               <Image
                 src="/download.svg"
@@ -46,16 +46,16 @@ export default function HomePage() {
         {/* Intro */}
         <div className="flex flex-col items-center gap-3 text-white">
           {/* Header */}
-          <h1 className="text-4xl font-nunito font-nunito-700">
+          <h1 className="font-nunito font-nunito-700">
             Revolutionize your Minecraft journey
           </h1>
 
           {/* Paragraph */}
-          <h3 className="text-lg font-nunito font-nunito-500 w-[1100px] text-center">
+          <h5 className="font-nunito font-nunito-500 w-[1100px] text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
             ipsum dolor sit amet, consectetur adipiscing elit.
-          </h3>
+          </h5>
         </div>
 
         {/* Cards Container */}
