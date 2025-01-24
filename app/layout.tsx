@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./ui/globals.css";
 
 import { lato, nunito, openSans } from "./ui/fonts";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "SynthLauncher",

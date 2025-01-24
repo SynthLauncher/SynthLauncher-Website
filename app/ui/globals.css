@@ -2,11 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar {
-  display: none; 
+:root {
+  --gradient-primary: linear-gradient(135deg, #ff6b00, #9333ea); 
+  --gradient-primary-bg: linear-gradient(
+    rgba(17, 24, 39, 0.8),
+    rgba(25, 33, 49, 0.8)
+  ),
+  var(--gradient-primary);
+  --gradient-gold: linear-gradient(135deg, #FF9F05, #FFDD00);
+  --gradient-title: linear-gradient(135deg, #FF9F05, #ff76fd);
+  --gradient-steel: linear-gradient(135deg, rgba(86,86,86,1) 0%, rgba(77,77,77,1) 25%, rgba(51,51,51,1) 50%, rgba(60,60,60,1) 75%, rgba(52,52,52,1) 100%);
+
 }
 
-html, body {
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -76,6 +90,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -105,6 +120,73 @@ body {
   }
 }
 
-@layer utilities {
- 
+@layer components {  
+  .download-card {
+    background-image: var(--gradient-primary-bg);
+    background-clip: padding-box, border-box;
+    transition-timing-function: cubic-bezier(0.4 0, 0.2, 1);
+  }
+
+  .download-card::before {
+    @apply absolute inset-[-2px] border-inherit p-[2px] transition-opacity duration-400 ease-in-out opacity-50;
+    content: "";
+    background: var(--gradient-primary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+  }
+
+  .download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 160, 17, 0.267), 0 0 30px rgba(146, 51, 234, 0.653),
+      0 0 0 1px rgba(0, 221, 255, 0.587);
+  }
+
+  .download-card:hover::before {
+    opacity: 1;
+  }
+
+  .platform-icon { 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .platform-icon::before {
+    @apply absolute inset-[-15px] rounded-full opacity-0 scale-75 transition-all duration-400 ease-in-out -z-10;
+    content: "";
+    background: var(--gradient-primary);
+  }
+
+  .download-card:hover .platform-icon {
+    @apply scale-110;
+    filter: drop-shadow(0 0 20px rgba(36, 136, 251, 0.354));
+  }
+
+  .download-card:hover .platform-icon::before {
+    @apply opacity-15 scale-100;
+  }
+
+  .download-button { 
+    background: var(--gradient-primary);
+  }
+
+  .download-button::before {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-400 ease-in-out;
+    content: "";
+    background: var(--gradient-primary);
+  }
+
+  .download-button:hover {
+    @apply translate-y-[-2px];
+    box-shadow: 0 10px 20px rgba(147, 51, 234, 0.2),
+      0 6px 12px rgba(255, 107, 0, 0.1), 0 0 0 2px rgba(147, 51, 234, 0.1);
+  }
+
+  .specs-card {
+    @apply relative overflow-hidden rounded-2xl p-6 border-[2px] border-solid border-transparent bg-origin-border;
+    background-clip: padding-box, border-box;
+  }
+
 }
