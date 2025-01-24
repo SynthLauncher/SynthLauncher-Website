@@ -122,7 +122,6 @@ body {
 
 @layer components {  
   .download-card {
-    background-image: var(--gradient-primary-bg);
     background-clip: padding-box, border-box;
     transition-timing-function: cubic-bezier(0.4 0, 0.2, 1);
   }

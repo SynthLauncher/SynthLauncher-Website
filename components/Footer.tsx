@@ -6,7 +6,7 @@ const Footer = () => {
   const footerNavs = assets.texts.en.Footer.navs;
 
   return (
-    <footer className="flex flex-col gap-12 bg-footer-dark h-1/6 pb-[50px]">
+    <footer className="flex flex-col gap-12 bg-footer-dark h-1/6 pb-[3.125rem] w-screen">
       {/* Top Part */}
       <div className="flex flex-wrap items-start gap-[20px] sm:gap-[50px] md:gap-[175px] mt-20 mx-auto">
         {/* Logo Container */}

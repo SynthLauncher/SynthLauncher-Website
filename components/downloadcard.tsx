@@ -51,7 +51,7 @@ const DownloadCard = ({ platforms } : PlatformProps) => {
     >
       {platforms.map((platform, index) => (
         <motion.div key={platform.name} variants={itemVariants}>
-          <div className="download-card relative overflow-hidden border-[2px] border-solid border-transparent bg-origin-border transition-all duration-400 rounded-2xl p-8 text-center h-full">
+          <div className="download-card bg-gradient-primary-bg relative overflow-hidden border-[2px] border-solid border-transparent bg-origin-border transition-all duration-400 rounded-2xl p-8 text-center h-full">
             <div className="relative z-10">
               <div className="relative">
                 <Image

@@ -1,6 +1,9 @@
+"use client"
+
+import React from 'react'
+
 import { assets } from '@/app/ui/assets'
 import { motion } from 'framer-motion';
-import React from 'react'
 
 const InfoLine = () => {
   const stats = assets.texts.en.Data.stats;

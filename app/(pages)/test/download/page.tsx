@@ -1,11 +1,11 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import React from "react";
+
 import DownloadCard from "@/components/downloadcard";
 import SpecCard from "@/components/speccard";
+
+import { motion } from "framer-motion";
 
 export default function TestDownloadPage() {
   const platforms = [
