@@ -4,18 +4,18 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 
 interface PlatformProp {
-  icon: string,
-  name: string,
-  desc: string,
-  version: string,
-  size: string
+  icon: string;
+  name: string;
+  desc: string;
+  version: string;
+  size: string;
 }
 
 interface PlatformProps {
   platforms: PlatformProp[];
 }
 
-const DownloadCard = ({ platforms } : PlatformProps) => {
+const DownloadCard = ({ platforms }: PlatformProps) => {
   const containerVariants = {
     hidden: {
       opacity: 0,

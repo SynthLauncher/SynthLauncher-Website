@@ -82,12 +82,12 @@ export default {
         "open-sans-400": "400",
       },
       backgroundImage: {
-        "hero": "url('/hero.png')",
-        
+        hero: "url('/hero.png')",
+
         "gradient-steel": "var(--gradient-steel)",
         "gradient-primary": "var(--gradient-primary)",
         "gradient-primary-bg": "var(--gradient-primary-bg)",
-        "gradient-title": "var(--gradient-title)"
+        "gradient-title": "var(--gradient-title)",
       },
       keyframes: {
         "accordion-down": {
@@ -112,8 +112,8 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       transitionDuration: {
-        400: "400ms"
-      }
+        400: "400ms",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

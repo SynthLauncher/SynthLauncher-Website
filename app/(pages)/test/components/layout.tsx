@@ -5,9 +5,5 @@ export default function TestDownloadLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <section>
-      {children}
-    </section>
-  );
+  return <section>{children}</section>;
 }

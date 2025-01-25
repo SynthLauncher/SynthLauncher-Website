@@ -9,9 +9,7 @@ export default function HomePage() {
     <main className="h-[90rem] bg-black">
       {/* Sector 1 */}
       <div className="bg-hero bg-cover bg-center w-full h-screen flex justify-center">
-        <div
-          className="flex flex-col my-auto gap-4 justify-center items-center mb-50"
-        >
+        <div className="flex flex-col my-auto gap-4 justify-center items-center mb-50">
           <div className="flex flex-col text-white">
             {/* Logo and Label */}
             <Image
@@ -48,18 +46,14 @@ export default function HomePage() {
 
       {/* Sector 2 */}
       <div className="bg-black h-[37.563rem] flex flex-col gap-[3.125rem] pt-[6.25rem]">
-          <InfoLine />
+        <InfoLine />
       </div>
 
       {/* Sector 3 */}
-      <div>
-
-      </div>
+      <div></div>
 
       {/* Sector 4 */}
-      <div>
-
-      </div>
+      <div></div>
     </main>
   );
 }

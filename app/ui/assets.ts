@@ -26,12 +26,12 @@ export const assets = {
       },
       Data: {
         stats: [
-            { number: "1M+", label: "Downloads"},
-            { number: "50K+", label: "Active Users"},
-            { number: "1000+", label: "Mods Supported"},
-            { number: "99.9%", label: "Uptime"}
-        ]
-      }
+          { number: "1M+", label: "Downloads" },
+          { number: "50K+", label: "Active Users" },
+          { number: "1000+", label: "Mods Supported" },
+          { number: "99.9%", label: "Uptime" },
+        ],
+      },
     },
   },
 };

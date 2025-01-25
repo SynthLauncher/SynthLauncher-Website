@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DownloadLayout({
+export default function UiTestLayout({
   children,
 }: {
   children: React.ReactNode;

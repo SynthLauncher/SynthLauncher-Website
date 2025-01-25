@@ -3,16 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --gradient-primary: linear-gradient(135deg, #ff6b00, #9333ea); 
+  --gradient-primary: linear-gradient(135deg, #ff6b00, #9333ea);
   --gradient-primary-bg: linear-gradient(
-    rgba(17, 24, 39, 0.8),
-    rgba(25, 33, 49, 0.8)
-  ),
-  var(--gradient-primary);
-  --gradient-gold: linear-gradient(135deg, #FF9F05, #FFDD00);
-  --gradient-title: linear-gradient(135deg, #FF9F05, #ff76fd);
-  --gradient-steel: linear-gradient(135deg, rgba(86,86,86,1) 0%, rgba(77,77,77,1) 25%, rgba(51,51,51,1) 50%, rgba(60,60,60,1) 75%, rgba(52,52,52,1) 100%);
-
+      rgba(17, 24, 39, 0.8),
+      rgba(25, 33, 49, 0.8)
+    ),
+    var(--gradient-primary);
+  --gradient-gold: linear-gradient(135deg, #ff9f05, #ffdd00);
+  --gradient-title: linear-gradient(135deg, #ff9f05, #ff76fd);
+  --gradient-steel: linear-gradient(
+    135deg,
+    rgba(86, 86, 86, 1) 0%,
+    rgba(77, 77, 77, 1) 25%,
+    rgba(51, 51, 51, 1) 50%,
+    rgba(60, 60, 60, 1) 75%,
+    rgba(52, 52, 52, 1) 100%
+  );
 }
 
 ::-webkit-scrollbar {
@@ -120,7 +126,7 @@ body {
   }
 }
 
-@layer components {  
+@layer components {
   .download-card {
     background-clip: padding-box, border-box;
     transition-timing-function: cubic-bezier(0.4 0, 0.2, 1);
@@ -130,7 +136,8 @@ body {
     @apply absolute inset-[-2px] border-inherit p-[2px] transition-opacity duration-400 ease-in-out opacity-50;
     content: "";
     background: var(--gradient-primary);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -140,15 +147,15 @@ body {
 
   .download-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(255, 160, 17, 0.267), 0 0 30px rgba(146, 51, 234, 0.653),
-      0 0 0 1px rgba(0, 221, 255, 0.587);
+    box-shadow: 0 20px 40px rgba(255, 160, 17, 0.267),
+      0 0 30px rgba(146, 51, 234, 0.653), 0 0 0 1px rgba(0, 221, 255, 0.587);
   }
 
   .download-card:hover::before {
     opacity: 1;
   }
 
-  .platform-icon { 
+  .platform-icon {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -167,7 +174,7 @@ body {
     @apply opacity-15 scale-100;
   }
 
-  .download-button { 
+  .download-button {
     background: var(--gradient-primary);
   }
 
@@ -187,5 +194,4 @@ body {
     @apply relative overflow-hidden rounded-2xl p-6 border-[2px] border-solid border-transparent bg-origin-border;
     background-clip: padding-box, border-box;
   }
-
 }
