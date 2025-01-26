@@ -47,7 +47,6 @@ import SignInForm from "@/components/signinform";
 import SignUpForm from "@/components/signupform";
 import PasswordResetForm from "@/components/passwordreset";
 import ProgressBar from "@/components/progressbar";
-import VolumeSlider from "@/components/volumeslider";
 import RadioCard from "@/components/radiocard";
 import AccordionCard from "@/components/accordioncard";
 import ToggleCard from "@/components/togglecard";
@@ -59,6 +58,7 @@ import LogCard from "@/components/logcard";
 import InteractiveCard from "@/components/interactivecard";
 import FeatureCard from "@/components/featurecard";
 import BlogCard from "@/components/blogcard";
+import SliderCard from "@/components/slidercard";
 
 export default function ComponentsShowcase() {
   return (
@@ -93,7 +93,15 @@ export default function ComponentsShowcase() {
             {/* <ProgressBar /> */}
 
             {/* Volume Slider */}
-            <VolumeSlider />
+            {/* <SliderCard 
+              count={0}
+              icon={Volume2}
+              iconX={VolumeX}
+              maxCount={100}
+              name="Volume"
+              stepCount={1}
+
+            /> */}
 
             {/* Radio Group */}
             <RadioCard />

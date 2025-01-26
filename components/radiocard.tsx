@@ -9,21 +9,9 @@ const RadioCard = () => {
       <h3 className="text-xl font-semibold text-white mb-4">Theme Selection</h3>
       <RadioGroup defaultValue="dark" className="space-y-2">
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="light" id="light" />
+          <RadioGroupItem value="light" id="light" color="green-500" className="border-green-600"/>
           <Label htmlFor="light" className="text-purple-200">
             Light Mode
-          </Label>
-        </div>
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="dark" id="dark" />
-          <Label htmlFor="dark" className="text-purple-200">
-            Dark Mode
-          </Label>
-        </div>
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="system" id="system" />
-          <Label htmlFor="system" className="text-purple-200">
-            System Default
           </Label>
         </div>
       </RadioGroup>
