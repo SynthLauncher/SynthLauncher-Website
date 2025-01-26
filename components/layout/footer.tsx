@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Heart, Twitter } from "lucide-react";
+import { Github, Heart, Instagram, Twitter, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -39,7 +39,7 @@ const Footer = () => {
   return (
     <footer className="bg-footer-dark backdrop-blur-lg border-t border-purple-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="flex flex-col gap-8 items-center md:justify-around md:flex-row">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -48,26 +48,38 @@ const Footer = () => {
             className="space-y-4"
           >
             <Link href="/" className="flex items-center space-x-2">
-                <Image 
-                  src={"/footerlogo.svg"}
-                  width={150}
-                  height={150}
-                  alt="logo"
-                />
+              <Image
+                src={"/footerlogo.svg"}
+                width={150}
+                height={150}
+                alt="logo"
+              />
             </Link>
             <div className="flex space-x-4">
-              <a
+              <Link
                 href="#"
                 className="text-purple-200/60 hover:text-purple-200 transition-colors"
               >
                 <Twitter className="h-5 w-5" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="text-purple-200/60 hover:text-purple-200 transition-colors"
               >
                 <Github className="h-5 w-5" />
-              </a>
+              </Link>
+              <Link
+                href="#"
+                className="text-purple-200/60 hover:text-purple-200 transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
+              </Link>
+              <Link
+                href="#"
+                className="text-purple-200/60 hover:text-purple-200 transition-colors"
+              >
+                <Youtube className="h-5 w-5" />
+              </Link>
             </div>
           </motion.div>
 
@@ -88,7 +100,9 @@ const Footer = () => {
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: (sectionIndex * 4 + linkIndex) * 0.1 }}
+                    transition={{
+                      delay: (sectionIndex * 4 + linkIndex) * 0.1,
+                    }}
                   >
                     <Link
                       href={link.href}
@@ -126,6 +140,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
