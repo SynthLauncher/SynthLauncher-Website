@@ -6,30 +6,41 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
+import { cn } from "@/lib/utils";
 
-const AccordionCard = () => {
+interface AccordionProp {
+  trigger: string;
+  content: string;
+
+  itemClassName?: string;
+  triggerClassName?: string;
+  contentClassName?: string;
+}
+
+interface Props {
+  title: string;
+  accordion: AccordionProp[];
+
+  cardClassName?: string;
+  titleClassName?: string;
+  accordionClassName?: string;
+}
+
+const AccordionCard = ({ title, accordion, cardClassName, titleClassName, accordionClassName }: Props) => {
   return (
-    <Card className="p-6 bg-purple-900/30 border-purple-500/30">
-      <h3 className="text-xl font-semibold text-white mb-4">FAQ</h3>
-      <Accordion type="single" collapsible className="space-y-2">
-        <AccordionItem value="item-1">
-          <AccordionTrigger className="text-purple-200 hover:text-white">
-            How do I get started?
-          </AccordionTrigger>
-          <AccordionContent className="text-purple-200/80">
-            Getting started is easy! Simply sign up for an account and follow
-            our quick start guide.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger className="text-purple-200 hover:text-white">
-            What are the system requirements?
-          </AccordionTrigger>
-          <AccordionContent className="text-purple-200/80">
-            Our platform works on all modern browsers and devices. No special
-            requirements needed.
-          </AccordionContent>
-        </AccordionItem>
+    <Card className={cn("p-6 bg-purple-900/30 border-purple-500/30", cardClassName)}>
+      <h3 className={cn("text-xl font-semibold text-white mb-4", titleClassName)}>{title}</h3>
+      <Accordion type="single" collapsible className={cn("space-y-2", accordionClassName)}>
+        {accordion.map((accordionItem, index) => (
+          <AccordionItem value={`item-${index}`} className={accordionItem.itemClassName}>
+            <AccordionTrigger className="text-purple-200 hover:text-white">
+              {accordionItem.trigger}
+            </AccordionTrigger>
+            <AccordionContent className="text-purple-200/80">
+              {accordionItem.content}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
       </Accordion>
     </Card>
   );

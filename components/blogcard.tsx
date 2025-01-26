@@ -4,6 +4,7 @@ import { Ban, Heart, Share2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface Props {
   banner: string;
@@ -54,16 +55,18 @@ const BlogCard = ({
           )}
         >
           <div className="relative">
-            <img
+            <Image
               src={banner}
               alt={alt}
-              className={cn("w-full h-64 object-cover", bannerClassName)}
+              className={cn("object-cover" , bannerClassName)}
+              width={800}
+              height={200}
             />
 
             <div className="absolute top-4 left-4">
               <span
                 className={cn(
-                  "px-3 py-1 bg-purple-500/20 backdrop-blur-sm text-purple-200 rounded-full text-sm",
+                  "px-3 py-1 bg-purple-500/50 backdrop-blur-sm text-purple-200 rounded-full text-sm",
                   featureTextClassName
                 )}
               >
@@ -105,13 +108,15 @@ const BlogCard = ({
             </p>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <img
+                <Image
                   src={authorPFP}
                   alt="Author"
                   className={cn(
-                    "w-10 h-10 rounded-full object-cover",
+                    "rounded-full object-cover",
                     authorPFPClassName
                   )}
+                  width={40}
+                  height={40}
                 />
                 <div>
                   <p className={cn("text-white font-medium", authorClassName)}>

@@ -1,96 +1,49 @@
 import React from "react";
+
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Card } from "./ui/card";
 import { Button } from "./ui/button";
+import { Download } from "lucide-react";
+import Image from "next/image";
 
-interface PlatformProp {
-  icon: string;
+interface Platform {
   name: string;
-  desc: string;
-  version: string;
+  index: number;
   size: string;
+  type: string;
+  requirements: string;
+  icon: string;
 }
 
-interface PlatformProps {
-  platforms: PlatformProp[];
-}
-
-const DownloadCard = ({ platforms }: PlatformProps) => {
-  const containerVariants = {
-    hidden: {
-      opacity: 0,
-    },
-
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
+const DownloadCard = ({ name, index, size, type, icon, requirements } : Platform) => {
   return (
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
-      variants={containerVariants}
+      key={name}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.2 }}
     >
-      {platforms.map((platform, index) => (
-        <motion.div key={platform.name} variants={itemVariants}>
-          <div className="download-card bg-gradient-primary-bg relative overflow-hidden border-[2px] border-solid border-transparent bg-origin-border transition-all duration-400 rounded-2xl p-8 text-center h-full">
-            <div className="relative z-10">
-              <div className="relative">
-                <Image
-                  src={platform.icon}
-                  alt={`${platform.name} icon`}
-                  width={64}
-                  height={64}
-                  className="platform-icon relative transition-all duration-400 mx-auto mb-6"
-                  layout="intrinsic"
-                />
-              </div>
-
-              <h2 className="text-2xl font-bold mb-2 gradient-text">
-                {platform.name}
-              </h2>
-
-              <p className="text-gray-400 mb-2">{platform.desc}</p>
-
-              <div className="flex justify-center gap-4 mb-6 text-sm text-gray-500">
-                <span>{platform.version}</span>
-                <span>•</span>
-                <span>{platform.size}</span>
-              </div>
-
-              <Button className="download-button rounded-lg font-medium relative overflow-hidden border-none transition-all duration-400 ease-in-out; hover:before:opacity-100 w-full gap-2 text-white py-6">
-                <span className="flex items-center gap-2 relative z-10">
-                  <Image
-                    src="/download.svg"
-                    height={50}
-                    width={50}
-                    alt="Download Icon"
-                  />
-                  Download for {platform.name}
-                </span>
-              </Button>
-            </div>
-          </div>
-        </motion.div>
-      ))}
+      <Card className="p-8 bg-purple-900/30 border-purple-500/30 backdrop-blur-sm hover:bg-purple-800/40 transition-all duration-300">
+        <Image 
+          width={48}
+          height={48}
+          className="mb-6 text-purple-500"
+          alt="icon"
+          src={icon}
+        />
+        <h2 className="text-2xl font-bold text-white mb-2">{name}</h2>
+        <p className="text-purple-200/80 mb-4">Version 2.0.1</p>
+        <div className="flex justify-between items-center text-purple-200/60 mb-6">
+          <span>{size}</span>
+          <span>{type}</span>
+        </div>
+        <p className="text-purple-200/60 text-sm mb-6">
+          {requirements}
+        </p>
+        <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+          <Download className="mr-2 h-4 w-4" /> Download
+        </Button>
+      </Card>
     </motion.div>
   );
 };

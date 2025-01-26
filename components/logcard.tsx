@@ -2,6 +2,7 @@ import React from "react";
 
 import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface Props {
   featureText: string;
@@ -36,7 +37,7 @@ const LogCard = ({
         cardClassName
       )}
     >
-      <img
+      <Image
         src={banner}
         alt={alt}
         className={cn("w-full h-48 object-cover", bannerClassName)}

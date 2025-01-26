@@ -12,58 +12,46 @@ import { Button } from "./ui/button";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
+import { cn } from "@/lib/utils";
 
-const DialogCard = () => {
+interface Props {
+  title: string;
+  trigger: string;
+  dialogTitle: string;
+  dialogDescription: string;
+  children: React.ReactNode;
+
+  cardClassName?: string;
+  titleClassName?: string;
+  dialogTriggerClassName?: string;
+  dialogTriggerButtonClassName?: string;
+  dialogContentClassName?: string; 
+  dialogHeaderClassName?: string;
+  dialogTitleClassName?: string;
+  dialogDescriptionClassName?: string;
+}
+
+const DialogCard = ({ title, trigger, dialogTitle, dialogDescription, children, cardClassName, dialogTriggerClassName, dialogContentClassName, dialogTriggerButtonClassName, dialogHeaderClassName, dialogTitleClassName, dialogDescriptionClassName, titleClassName } : Props) => {
   return (
-    <Card className="p-6 bg-purple-900/30 border-purple-500/30">
-      <h3 className="text-xl font-semibold text-white mb-4">Modal Dialog</h3>
+    <Card className={cn("p-6 bg-purple-900/30 border-purple-500/30", cardClassName)}>
+      <h3 className={cn("text-xl font-semibold text-white mb-4", titleClassName)}>{title}</h3>
+
       <Dialog>
-        <DialogTrigger asChild>
-          <Button className="w-full bg-purple-600 hover:bg-purple-700">
-            Open Settings
+        <DialogTrigger asChild className={dialogTriggerClassName}>
+          <Button className={cn("w-full bg-purple-600 hover:bg-purple-700", dialogTriggerButtonClassName)}>
+            {trigger}
           </Button>
         </DialogTrigger>
-        <DialogContent className="bg-purple-900/95 border-purple-500/30 text-white">
-          <DialogHeader>
-            <DialogTitle>Settings</DialogTitle>
-            <DialogDescription className="text-purple-200">
-              Customize your experience with these settings.
+
+        <DialogContent className={cn("bg-purple-900/95 border-purple-500/30 text-white", dialogContentClassName)}>
+          <DialogHeader className={dialogHeaderClassName}>
+            <DialogTitle className={dialogTitleClassName}>{dialogTitle}</DialogTitle>
+            <DialogDescription className={cn("text-purple-200", dialogDescriptionClassName)}>
+              {dialogDescription}
             </DialogDescription>
           </DialogHeader>
-          <div className="space-y-4 py-4">
-            <div className="space-y-2">
-              <Label htmlFor="name" className="text-purple-200">
-                Display Name
-              </Label>
-              <Input
-                id="name"
-                className="bg-purple-900/30 border-purple-500/30 text-purple-200"
-                placeholder="Enter your display name"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label className="text-purple-200">Theme</Label>
-              <RadioGroup defaultValue="dark" className="space-y-2">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="light" id="light-dialog" />
-                  <Label htmlFor="light-dialog" className="text-purple-200">
-                    Light
-                  </Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="dark" id="dark-dialog" />
-                  <Label htmlFor="dark-dialog" className="text-purple-200">
-                    Dark
-                  </Label>
-                </div>
-              </RadioGroup>
-            </div>
-          </div>
-          <div className="flex justify-end">
-            <Button className="bg-purple-600 hover:bg-purple-700">
-              Save Changes
-            </Button>
-          </div>
+
+          {children}
         </DialogContent>
       </Dialog>
     </Card>

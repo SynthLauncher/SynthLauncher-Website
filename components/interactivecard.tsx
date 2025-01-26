@@ -9,7 +9,7 @@ interface Props {
   title: string;
   content: string;
   bonuses: string[];
-  bonusIcon: React.ComponentType<LucideProps>;
+  bonusIcon?: React.ComponentType<LucideProps>;
   icon: React.ComponentType<LucideProps>;
 
   cardClassName?: string;
@@ -67,7 +67,10 @@ const InteractiveCard = ({
                     : "flex items-center text-purple-200"
                 }
               >
-                <BonusIcon className={cn("w-5 h-5 mr-2", bonusIconClassName)} />
+                {
+                  BonusIcon ?
+                  <BonusIcon className={cn("w-5 h-5 mr-2", bonusIconClassName)} /> : <></>
+                }
                 <span className={bonusesClassName}>{bonus}</span>
               </div>
             ))}

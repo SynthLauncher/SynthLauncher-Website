@@ -70,11 +70,11 @@ export default function UiTestPage() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 mt-16"
         >
           <h1 className="text-5xl font-bold mb-6">
             Frequently Asked{" "}
-            <span className="faq-gradient-text">Questions</span>
+            <span className="text-transparent bg-gradient-to-r from-orange-500 to-purple-400 bg-clip-text">Questions</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Find answers to common questions about SynthLauncher
@@ -92,7 +92,7 @@ export default function UiTestPage() {
               <motion.div key={index} variants={itemVariants}>
                 <AccordionItem
                   value={`item-${index}`}
-                  className="faq-card rounded-xl mb-4 border-none"
+                  className=" bg-slate-300/10 backdrop-blur-lg rounded-xl mb-4 border border-white/20 shadow-md w-full  "
                 >
                   <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
                     <span className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">

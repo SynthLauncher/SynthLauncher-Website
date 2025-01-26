@@ -51,7 +51,6 @@ import RadioCard from "@/components/radiocard";
 import AccordionCard from "@/components/accordioncard";
 import ToggleCard from "@/components/togglecard";
 import DialogCard from "@/components/dialogcard";
-import DownloadCardv2 from "@/components/downloadcardv2";
 import SpecCard from "@/components/speccard";
 import SupportCard from "@/components/supportcard";
 import LogCard from "@/components/logcard";
@@ -59,70 +58,15 @@ import InteractiveCard from "@/components/interactivecard";
 import FeatureCard from "@/components/featurecard";
 import BlogCard from "@/components/blogcard";
 import SliderCard from "@/components/slidercard";
+import Image from "next/image";
+import DownloadCard from "@/components/downloadcard";
 
 export default function ComponentsShowcase() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-950 via-gray-900 to-black p-8">
-      <h1 className="text-4xl font-bold text-white mb-12 text-center">
+      <h1 className="text-4xl font-bold text-white mb-12 text-center mt-12">
         UI Components Showcase
       </h1>
-
-      {/* Authentication Forms */}
-      {/* <section className="mb-16">
-        <h2 className="text-2xl font-semibold text-white mb-6">
-          Authentication Components
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <SignInForm />
-
-          <SignUpForm />
-
-          <PasswordResetForm />
-        </div>
-      </section> */}
-
-      {/* Modern Controls Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-semibold text-white mb-6">
-          Modern Controls
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Left Column */}
-          <div className="space-y-6">
-            {/* Progress Bar */}
-            {/* <ProgressBar /> */}
-
-            {/* Volume Slider */}
-            {/* <SliderCard 
-              count={0}
-              icon={Volume2}
-              iconX={VolumeX}
-              maxCount={100}
-              name="Volume"
-              stepCount={1}
-
-            /> */}
-
-            {/* Radio Group */}
-            <RadioCard />
-          </div>
-
-          {/* Right Column */}
-          <div className="space-y-6">
-            {/* Accordion */}
-            <AccordionCard />
-
-            {/* Toggles */}
-            <ToggleCard />
-
-            {/* Dialog */}
-            <DialogCard />
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced Download Section */}
-      <DownloadCardv2 />
 
       {/* Enhanced Button Showcase */}
       <section className="mb-16">
@@ -193,21 +137,6 @@ export default function ComponentsShowcase() {
         </div>
       </section>
 
-      {/* Support Section */}
-      {/* <SupportCard /> */}
-
-      {/* Blog Post Cards */}
-      {/* <BlogCard /> */}
-
-      {/* Modern Info Cards Section */}
-      {/* <section className="mb-16">
-        <h2 className="text-2xl font-semibold text-white mb-6">
-          Feature Cards
-        </h2>
-        <FeatureCard title="Test" content="lorem" icon={Rocket} />
-      </section> */}
-
-      {/* Sliding Cards Section */}
       <section className="mb-16 overflow-hidden">
         <h2 className="text-2xl font-semibold text-white mb-6">
           Sliding Cards
@@ -224,10 +153,12 @@ export default function ComponentsShowcase() {
               whileHover={{ scale: 1.02 }}
             >
               <Card className="p-6 bg-gradient-to-br from-purple-800/40 to-purple-900/40 border-purple-500/30 backdrop-blur-sm">
-                <img
-                  src={`https://source.unsplash.com/random/400x200?tech&sig=${item}`}
+                <Image
+                  src="/"
                   alt="Card image"
                   className="rounded-lg mb-4 w-full h-48 object-cover"
+                  width={0}
+                  height={0}
                 />
                 <h3 className="text-xl font-semibold text-white mb-2">
                   Feature {item}
@@ -240,28 +171,6 @@ export default function ComponentsShowcase() {
           ))}
         </motion.div>
       </section>
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 mb-5">
-        <LogCard 
-          banner="/"
-          alt="banner"
-          title="Hi"
-          content="hi"
-          featureText="s2"
-        />
-      </div> */}
-      {/* 
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        <InteractiveCard
-          title="SynthLauncher Code"
-          content="Explore our codebase"
-          icon={Code}
-          bonuses={["/src", "/src", "/src"]}
-          bonusIcon={Folder}
-          indexes={[1, 2]}
-          indexClassName="ml-5"
-        />
-      </div> */}
     </div>
   );
 }

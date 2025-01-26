@@ -1,12 +1,12 @@
 import React from "react";
 
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
 
 import { lato, nunito, openSans } from "./ui/fonts";
 import type { Metadata } from "next";
 
 import "./ui/globals.css";
+import Navbar from "@/components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "SynthLauncher",
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.variable} ${lato.variable} ${nunito.variable} antialiased`}
+        className={`${openSans.variable} ${lato.variable} ${nunito.variable} antialiased bg-black`}
       >
         {/* Navbar */}
         <Navbar />
