@@ -1,7 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+
 import { motion } from "framer-motion";
 import {
+  ComputerIcon,
   Download,
   Github,
   HelpCircleIcon,
@@ -10,10 +14,8 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,10 +25,11 @@ const Navbar = () => {
     { href: "/download", label: "Download", icon: Download },
     { href: "/support", label: "Support", icon: HelpCircleIcon },
     { href: "/changelogs", label: "Changelogs", icon: LogsIcon },
+    { href: "/releases", label: "Releases", icon: ComputerIcon },
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-black/40 backdrop-blur-md border-b-2 border-purple-500/20 ">
+    <nav className="fixed w-full z-50 bg-black/40 backdrop-blur-md border-b-2 border-purple-500/20">
       <div className="max-w-full mx-2 mr-5">
         <div className="w-full flex items-center justify-between h-16">
           <motion.div

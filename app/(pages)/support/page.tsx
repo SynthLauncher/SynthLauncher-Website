@@ -14,13 +14,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import SupportCard from "@/components/supportcard";
 
 export default function SupportPage() {
   const supportOptions = [
     {
       icon: Book,
       title: "Documentation",
-      description: "Comprehensive guides and API references",
+      description: "Comprehensive Docs",
       link: "#",
     },
     {
@@ -61,29 +62,6 @@ export default function SupportPage() {
           </p>
         </motion.div>
 
-        {/* Search Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="max-w-2xl mx-auto mb-16"
-        >
-          <Card className="p-6 bg-purple-900/30 border-purple-500/30 backdrop-blur-sm">
-            <div className="flex items-center space-x-4">
-              <div className="flex-1">
-                <Input
-                  type="text"
-                  placeholder="Search our documentation..."
-                  className="bg-purple-900/30 border-purple-500/30 text-purple-200 placeholder:text-purple-400/50"
-                />
-              </div>
-              <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
-                Search
-              </Button>
-            </div>
-          </Card>
-        </motion.div>
-
         {/* Support Options Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {supportOptions.map((option, index) => (
@@ -93,19 +71,13 @@ export default function SupportPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="p-6 bg-purple-900/30 border-purple-500/30 backdrop-blur-sm hover:bg-purple-800/40 transition-all duration-300">
-                <option.icon className="w-8 h-8 text-purple-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {option.title}
-                </h3>
-                <p className="text-purple-200/80 mb-4">{option.description}</p>
-                <Button
-                  variant="ghost"
-                  className="w-full text-purple-200 hover:bg-purple-500/20"
-                >
-                  Learn More
-                </Button>
-              </Card>
+              <SupportCard
+                btnLabel="View more"
+                title={option.title}
+                description={option.description}
+                btnVariant="ghost"
+                icon={option.icon}
+              />
             </motion.div>
           ))}
         </div>

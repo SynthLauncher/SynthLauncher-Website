@@ -2,25 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --gradient-primary: linear-gradient(135deg, #ff6b00, #9333ea);
-  --gradient-primary-bg: linear-gradient(
-      rgba(17, 24, 39, 0.8),
-      rgba(25, 33, 49, 0.8)
-    ),
-    var(--gradient-primary);
-  --gradient-gold: linear-gradient(135deg, #ff9f05, #ffdd00);
-  --gradient-title: linear-gradient(135deg, #ff9f05, #ff76fd);
-  --gradient-steel: linear-gradient(
-    135deg,
-    rgba(86, 86, 86, 1) 0%,
-    rgba(77, 77, 77, 1) 25%,
-    rgba(51, 51, 51, 1) 50%,
-    rgba(60, 60, 60, 1) 75%,
-    rgba(52, 52, 52, 1) 100%
-  );
-}
-
 ::-webkit-scrollbar {
   display: none;
 }

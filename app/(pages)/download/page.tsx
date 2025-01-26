@@ -2,31 +2,10 @@
 
 import { motion } from "framer-motion";
 import DownloadCard from "@/components/downloadcard";
+import { assets } from "@/app/ui/assets";
 
 export default function DownloadPage() {
-  const platforms = [
-    {
-      icon: "/windows.svg",
-      name: "Windows",
-      size: "120MB",
-      type: ".exe",
-      requirements: "Windows 10 or later",
-    },
-    {
-      icon: "/apple.svg",
-      name: "macOS",
-      size: "115MB",
-      type: ".dmg",
-      requirements: "macOS 11 or later",
-    },
-    {
-      icon: "linux.svg",
-      name: "Linux",
-      size: "110MB",
-      type: ".AppImage",
-      requirements: "Most distributions",
-    },
-  ];
+  const platforms = assets.texts.en.Data.platforms
 
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">

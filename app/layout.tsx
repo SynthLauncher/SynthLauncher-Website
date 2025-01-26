@@ -1,12 +1,10 @@
-import React from "react";
-
 import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
 
 import { lato, nunito, openSans } from "./ui/fonts";
 import type { Metadata } from "next";
 
 import "./ui/globals.css";
-import Navbar from "@/components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "SynthLauncher",

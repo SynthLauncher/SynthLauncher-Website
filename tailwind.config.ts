@@ -83,11 +83,6 @@ export default {
       },
       backgroundImage: {
         hero: "url('/hero.png')",
-
-        "gradient-steel": "var(--gradient-steel)",
-        "gradient-primary": "var(--gradient-primary)",
-        "gradient-primary-bg": "var(--gradient-primary-bg)",
-        "gradient-title": "var(--gradient-title)",
       },
       keyframes: {
         "accordion-down": {

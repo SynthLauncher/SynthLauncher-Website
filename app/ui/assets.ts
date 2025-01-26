@@ -31,6 +31,30 @@ export const assets = {
           { number: "1000+", label: "Mods Supported" },
           { number: "99.9%", label: "Uptime" },
         ],
+
+        platforms: [
+          {
+            icon: "/windows.svg",
+            name: "Windows",
+            size: "120MB",
+            type: ".exe",
+            requirements: "Windows 10 or later",
+          },
+          {
+            icon: "/apple.svg",
+            name: "macOS",
+            size: "115MB",
+            type: ".dmg",
+            requirements: "macOS 11 or later",
+          },
+          {
+            icon: "linux.svg",
+            name: "Linux",
+            size: "110MB",
+            type: ".AppImage",
+            requirements: "Most distributions",
+          },
+        ]
       },
     },
   },

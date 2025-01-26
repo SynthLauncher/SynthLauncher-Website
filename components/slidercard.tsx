@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Card } from "./ui/card";
-import { LucideProps, Volume2, VolumeX } from "lucide-react";
+import { LucideProps } from "lucide-react";
 import { Slider } from "./ui/slider";
 import { cn } from "@/lib/utils";
 
@@ -16,14 +16,31 @@ interface Props {
   nameClassName?: string;
   iconClassName?: string;
   sliderClassName?: string;
-}  
+}
 
-const SliderCard = ({ icon: Icon, iconX: IconX, count, maxCount, stepCount, name, cardClassName, nameClassName, iconClassName, sliderClassName } : Props) => {
+const SliderCard = ({
+  icon: Icon,
+  iconX: IconX,
+  count,
+  maxCount,
+  stepCount,
+  name,
+  cardClassName,
+  nameClassName,
+  iconClassName,
+  sliderClassName,
+}: Props) => {
   const [progress, setProgress] = useState(0);
 
   return (
-    <Card className={cn("p-6 bg-purple-900/30 border-purple-500/30", cardClassName)}>
-      <h3 className={cn("text-xl font-semibold text-white mb-4", nameClassName)}>{name}</h3>
+    <Card
+      className={cn("p-6 bg-purple-900/30 border-purple-500/30", cardClassName)}
+    >
+      <h3
+        className={cn("text-xl font-semibold text-white mb-4", nameClassName)}
+      >
+        {name}
+      </h3>
       <div className="flex items-center space-x-4">
         <button
           onClick={() => setProgress(count)}

@@ -1,6 +1,3 @@
-import React from "react";
-
-import { motion } from "framer-motion";
 import { Card } from "./ui/card";
 import { LucideProps } from "lucide-react";
 import { cn } from "@/lib/utils";

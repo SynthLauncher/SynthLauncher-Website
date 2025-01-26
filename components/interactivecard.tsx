@@ -1,8 +1,6 @@
-import React from "react";
-
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
-import { Indent, LucideProps } from "lucide-react";
+import { LucideProps } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -67,10 +65,13 @@ const InteractiveCard = ({
                     : "flex items-center text-purple-200"
                 }
               >
-                {
-                  BonusIcon ?
-                  <BonusIcon className={cn("w-5 h-5 mr-2", bonusIconClassName)} /> : <></>
-                }
+                {BonusIcon ? (
+                  <BonusIcon
+                    className={cn("w-5 h-5 mr-2", bonusIconClassName)}
+                  />
+                ) : (
+                  <></>
+                )}
                 <span className={bonusesClassName}>{bonus}</span>
               </div>
             ))}

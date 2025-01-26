@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "./ui/card";
-import { Ban, Heart, Share2 } from "lucide-react";
+import { Heart, Share2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -58,7 +58,7 @@ const BlogCard = ({
             <Image
               src={banner}
               alt={alt}
-              className={cn("object-cover" , bannerClassName)}
+              className={cn("object-cover", bannerClassName)}
               width={800}
               height={200}
             />

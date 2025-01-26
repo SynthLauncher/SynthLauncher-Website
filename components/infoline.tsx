@@ -1,7 +1,3 @@
-"use client";
-
-import React from "react";
-
 import { assets } from "@/app/ui/assets";
 import { motion } from "framer-motion";
 

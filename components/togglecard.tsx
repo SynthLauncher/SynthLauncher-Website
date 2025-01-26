@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Card } from "./ui/card";
 import { Toggle } from "./ui/toggle";
 import { Bell, Moon } from "lucide-react";
