@@ -112,13 +112,6 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <Button
-            variant="outline"
-            className="w-full border-purple-500 text-purple-950 hover:text-white hover:bg-purple-500/20 mt-2"
-          >
-            <Github className="w-4 h-4 mr-2" />
-            GitHub
-          </Button>
         </div>
       </motion.div>
     </nav>

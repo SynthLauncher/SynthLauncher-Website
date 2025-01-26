@@ -5,7 +5,7 @@ import DownloadCard from "@/components/downloadcard";
 import { assets } from "@/app/ui/assets";
 
 export default function DownloadPage() {
-  const platforms = assets.texts.en.Data.platforms
+  const platforms = assets.texts.en.Data.platforms;
 
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -26,7 +26,8 @@ export default function DownloadPage() {
         </motion.div>
 
         {/* Download Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+        <div className="flex flex-col md:flex-row justify-center gap-8 mb-16 items-center w-full">
           {platforms.map((platform, index) => (
             <DownloadCard
               key={index}
@@ -36,6 +37,7 @@ export default function DownloadPage() {
               size={platform.size}
               type={platform.type}
               requirements={platform.requirements}
+
             />
           ))}
         </div>
